@@ -42,10 +42,10 @@ public class ThanhToanActivity extends AppCompatActivity {
         initControl();
     }
 
+//   Tính tổng sản phẩm , lưu số lượng sản phẩm vào mảng mua haàng
     private void countItem() {
         totalItem = 0;
         for(int i=0; i<Utils.mangmuahang.size(); i++){
-//            Toast.makeText(this,"Tính tiền mua",Toast.LENGTH_LONG).show();
             totalItem = totalItem + Utils.mangmuahang.get(i).getSoluong();
         }
     }
@@ -59,11 +59,9 @@ public class ThanhToanActivity extends AppCompatActivity {
                 finish();
             }
         });
-// cái giá nớ đâu quên
         long tongtien = Long.parseLong(getIntent().getLongExtra("tongtien", 0) + "");
 
         txttongtien.setText( "Giá: "+String.valueOf(tongtien));
-//        tongtien.setText(String.valueOf(tongtiensp));
         txtsdt.setText("Số điện thoại: "+Utils.user_current.getMobile());
         txtusername.setText("Họ và tên: "+Utils.user_current.getUsername());
         txtemail.setText("Email: "+Utils.user_current.getEmail());
@@ -112,6 +110,7 @@ public class ThanhToanActivity extends AppCompatActivity {
         txtsdt = findViewById(R.id.txtsdt);
         diachigiaohang = findViewById(R.id.diachigiaohang);
         btndathang = findViewById(R.id.btndathang);
+
     }
 
     @Override

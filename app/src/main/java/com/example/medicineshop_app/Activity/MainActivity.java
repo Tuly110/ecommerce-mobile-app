@@ -20,6 +20,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -68,9 +69,6 @@ public class MainActivity extends AppCompatActivity {
     NotificationBadge badge;
     FrameLayout frameLayout;
     ImageView imagesearch;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -157,7 +155,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                 ));
     }
-
     private void getLoaiSanPham() {
         compositeDisposable.add(apiBanhang.getLoaiSP()
                 .subscribeOn(Schedulers.io())
@@ -211,6 +208,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+//   Ánh xạ thực hiện việc khởi tạo và thiết lập các thành phần giao diện
     private void Anhxa()
     {
         imagesearch = findViewById(R.id.imgsearch);
@@ -219,6 +217,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewManHinhChinh = findViewById(R.id.recycleView);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
         recyclerViewManHinhChinh.setLayoutManager(layoutManager);
+//        Gọi setHasFixedSize(true) để tối ưu hóa hiệu suất của RecyclerView
         recyclerViewManHinhChinh.setHasFixedSize(true);
         ListViewManHinhChinh = findViewById(R.id.listviewmanhinhchinh);
         navigationView = findViewById(R.id.navigationview);
@@ -229,10 +228,12 @@ public class MainActivity extends AppCompatActivity {
 //        Khoi tao list
         mangloaiSP = new ArrayList<>();
         mangSpMoi = new ArrayList<>();
+//        Kiểm tra và cập nhật giỏ hàng
         if(Utils.manggiohang == null)
         {
             Utils.manggiohang = new ArrayList<>();
         }else{
+//            lưu tổng sản phẩm trong giỏ hàng
             int totalItem = 0;
             for(int i=0; i<Utils.manggiohang.size(); i++){
                 totalItem = totalItem + Utils.manggiohang.get(i).getSoluong();

@@ -89,6 +89,7 @@
         </LinearLayout>
 
     </LinearLayout>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_marginTop="5dp"
@@ -102,7 +103,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:text="Mô tả chi tiết sản phẩm:"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <ScrollView
             android:layout_width="match_parent"
@@ -114,8 +115,57 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </ScrollView>
-    </LinearLayout>
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_marginRight="20dp"
+                android:text="💭 Bình Luận:"/>
+            <Button
+                android:id="@+id/btnComment"
+                android:layout_marginLeft="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:backgroundTint="#605A60"
+                android:text="Bình luận ở đây"/>
 
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:id="@+id/emptyComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:text="Hãy là người đầu tiên bình luận!"/>
+        <TextView
+            android:id="@+id/endComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:text="Nhấn bình luận để đọc nhiều hơn nghe☺️"/>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

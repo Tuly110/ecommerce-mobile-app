@@ -23,7 +23,6 @@ public class DonHangAdapter extends RecyclerView.Adapter<DonHangAdapter.MyViewHo
     List<DonHang> listdonhang;
 
     public DonHangAdapter(Context context, List<DonHang> listdonhang) {
-        Toast.makeText(context,"hi nghe", Toast.LENGTH_LONG).show();
         this.context = context;
         this.listdonhang = listdonhang;
     }

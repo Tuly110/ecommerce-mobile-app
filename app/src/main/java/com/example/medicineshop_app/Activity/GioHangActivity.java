@@ -41,20 +41,18 @@ public class GioHangActivity extends AppCompatActivity {
     }
 
     private void tinhTongTien() {
-
         tongtiensp=0;
         for(int i=0; i<Utils.mangmuahang.size(); i++){
-
             tongtiensp =tongtiensp + (Utils.mangmuahang.get(i).getGiasp() * Utils.mangmuahang.get(i).getSoluong());
         }
-
         tongtien.setText(String.valueOf(tongtiensp));
-
     }
 
     private void initControl() {
         setSupportActionBar(toolbar);
+//      Hiển thị nút quay lại (Up/Home button) trên ActionBar.
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//      Thiết lập sự kiện khi nhấn vào nút quay lại
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,9 +63,11 @@ public class GioHangActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         if(Utils.manggiohang.size() ==0){
+//          Thông báo giỏ hàng trống
             giohangtrong.setVisibility(View.VISIBLE);
         }else{
             adapter = new GioHangAdapter(getApplicationContext(), Utils.manggiohang);
+//          Gán adapter cho RecyclerView để hiển thị các sản phẩm trong giỏ hàng.
             recyclerView.setAdapter(adapter);
         }
 
@@ -77,7 +77,6 @@ public class GioHangActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), ThanhToanActivity.class);
                 intent.putExtra("tongtien", tongtiensp);
                 Utils.manggiohang.clear();
-
                 startActivity(intent);
             }
         });

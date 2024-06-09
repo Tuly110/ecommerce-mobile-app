@@ -64,6 +64,7 @@ public class DangKiActivity extends AppCompatActivity {
                 compositeDisposable.add(apiBanhang.dangKy(str_email, str_pass, str_user,str_mobile)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
+//                        Nhận kết quả từ lệnh gọi API
                         .subscribe(
                                 userModel -> {
                                     if(userModel.isSuccess()){
@@ -85,6 +86,7 @@ public class DangKiActivity extends AppCompatActivity {
             }
         }
     }
+//    khởi tạo các thành phần giao diện người dùng và thiết lập đối tượng apiBanhang để thực hiện các lệnh gọi API
     private void initView() {
         apiBanhang = RetrofitClient.getInstance(Utils.BASE_URL).create(ApiBanhang.class);
         email = findViewById(R.id.email);

@@ -1,4 +1,5 @@
 package com.example.medicineshop_app.retrofit;
+import com.example.medicineshop_app.model.CommentModel;
 import com.example.medicineshop_app.model.DonHangModel;
 import com.example.medicineshop_app.model.LoaiSpModel;
 import com.example.medicineshop_app.model.SanPhamMoiModel;
@@ -67,5 +68,17 @@ public interface ApiBanhang {
     @FormUrlEncoded
     Observable<SanPhamMoiModel> search(
             @Field("search") String search
+    );
+    @POST("comment.php")
+    @FormUrlEncoded
+    Observable<CommentModel> comment(
+            @Field("idsp") int idsp
+    );
+    @POST("postComment.php")
+    @FormUrlEncoded
+    Observable<CommentModel> postComment(
+            @Field("user_id") int user_id,
+            @Field("idsp") int idsp,
+            @Field("comment") String comment
     );
 }

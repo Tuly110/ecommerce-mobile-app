@@ -64,7 +64,7 @@ public class DangNhapActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Bạn chưa nhập Password", Toast.LENGTH_SHORT).show();
                 }else
                 {
-//                    save
+//                    save data
                     Paper.book().write("email", str_email);
                     Paper.book().write("pass", str_pass);
                     dangNhap(str_email, str_pass);

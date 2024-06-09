@@ -17,8 +17,8 @@
             android:layout_height="match_parent">
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toobarmanhinhchinh"
-                app:title="Trang chính"
-                android:background="#8C9EFF"
+                app:title="Trang chủ"
+                android:background="#DEEDCB"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize">
                 <LinearLayout
