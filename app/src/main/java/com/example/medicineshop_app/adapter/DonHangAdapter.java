@@ -18,9 +18,10 @@ import com.example.medicineshop_app.model.DonHang;
 import java.util.List;
 
 public class DonHangAdapter extends RecyclerView.Adapter<DonHangAdapter.MyViewHolder> {
-    private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
+  //  private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
     Context context;
     List<DonHang> listdonhang;
+    private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
 
     public DonHangAdapter(Context context, List<DonHang> listdonhang) {
         this.context = context;
@@ -30,15 +31,16 @@ public class DonHangAdapter extends RecyclerView.Adapter<DonHangAdapter.MyViewHo
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_chitiet, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_donhang, parent, false);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Toast.makeText(context,"Chào", Toast.LENGTH_LONG).show();
+     // naày adapter ồi
         DonHang donHang = listdonhang.get(position);
-        Toast.makeText(context,donHang.getId(), Toast.LENGTH_LONG).show();
+//        holder.ten_donHang.setText(donHang.getSdt());
+//        Toast.makeText(context,donHang.getId(), Toast.LENGTH_LONG).show();
         holder.txtdonhang.setText("Đơn hàng"+donHang.getId());
         LinearLayoutManager layoutManager = new LinearLayoutManager(
                 holder.reChiTiet.getContext(),
@@ -59,12 +61,13 @@ public class DonHangAdapter extends RecyclerView.Adapter<DonHangAdapter.MyViewHo
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView txtdonhang;
+        TextView txtdonhang,ten_donHang;
         RecyclerView reChiTiet;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             txtdonhang = itemView.findViewById(R.id.iddonhang);
+            ten_donHang = itemView.findViewById(R.id.item_tenspchitiet);
             reChiTiet = itemView.findViewById(R.id.recycleview_chitiet);
         }
     }

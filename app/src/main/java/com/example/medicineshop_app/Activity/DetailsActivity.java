@@ -230,9 +230,11 @@ public class DetailsActivity extends AppCompatActivity {
                 .subscribe(
                         commentModel -> {
                             if (commentModel.isSucess()) {
-                                Toast.makeText(getApplicationContext(), commentModel.getMessage(), Toast.LENGTH_LONG).show();
                                 Toast.makeText(getApplicationContext(), "Bình luận thành công", Toast.LENGTH_LONG).show();
                                 pushDialogComments();
+                            }else{
+                                Toast.makeText(getApplicationContext(), "Thất bại", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),commentModel.getMessage(), Toast.LENGTH_LONG).show();
                             }
                         },
                         throwable -> {
@@ -240,7 +242,7 @@ public class DetailsActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Loi binh luan", Toast.LENGTH_LONG).show();
                         }
                 ));
-    }
+    }// lỗi hả ren ko thấy thông báo chi ết rưứa
 
     private void initView() {
 

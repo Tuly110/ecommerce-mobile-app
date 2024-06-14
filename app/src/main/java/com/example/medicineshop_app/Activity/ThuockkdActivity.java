@@ -99,7 +99,8 @@ public class ThuockkdActivity extends AppCompatActivity {
         },2000);
     }
 
-    private void getData(int page) {
+    private void getData(int page) {// gaán string ren quên rồi
+
         compositeDisposable.add(apiBanhang.getSanPham(page, loai)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -133,6 +134,19 @@ public class ThuockkdActivity extends AppCompatActivity {
     }
 
     private void ActionToolBar() {
+
+        switch (loai){
+            case 1:
+               toolbar.setTitle("Thuốc Không Kê Đơn");
+               break;
+            case 2:
+                toolbar.setTitle("Thực Phẩm Chức Năng");
+                break;
+            case 3:
+                toolbar.setTitle("Thiết Bị Y Tế");
+                break;
+
+        }
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener(){

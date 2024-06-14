@@ -58,7 +58,7 @@ public interface ApiBanhang {
             @Field("chitiet") String chitiet
     );
 
-    @POST("xemdonhang.php")
+    @POST("xemdonhang.php")// cho xem c lây đơn hàng trong ni đi
     @FormUrlEncoded
     Observable<DonHangModel> xemDonHang(
             @Field("iduser") int id // ở php lên đi
