@@ -18,7 +18,6 @@ import com.example.medicineshop_app.model.DonHang;
 import java.util.List;
 
 public class DonHangAdapter extends RecyclerView.Adapter<DonHangAdapter.MyViewHolder> {
-  //  private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
     Context context;
     List<DonHang> listdonhang;
     private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
@@ -37,11 +36,8 @@ public class DonHangAdapter extends RecyclerView.Adapter<DonHangAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-     // naày adapter ồi
         DonHang donHang = listdonhang.get(position);
-//        holder.ten_donHang.setText(donHang.getSdt());
-//        Toast.makeText(context,donHang.getId(), Toast.LENGTH_LONG).show();
-        holder.txtdonhang.setText("Đơn hàng"+donHang.getId());
+        holder.txtdonhang.setText("Đơn hàng "+donHang.getId());
         LinearLayoutManager layoutManager = new LinearLayoutManager(
                 holder.reChiTiet.getContext(),
                 LinearLayoutManager.VERTICAL,

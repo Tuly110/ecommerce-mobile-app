@@ -104,15 +104,17 @@ public class DetailsActivity extends AppCompatActivity {
 
     private void themGioHang() {
         if(Utils.manggiohang.size() > 0){
+//           Kieemrm tra xem sp da co goo hang chua
             boolean flag = false;
             int soluong = Integer.parseInt(spinner.getSelectedItem().toString());
+//            Duyêt qua tat ca sp trong cart
             for(int i=0; i<Utils.manggiohang.size(); i++){
 //                trung san pham
                 if(Utils.manggiohang.get(i).getIdsp() == sanPhamMoi.getId()){
 //                    set lai so luong
                     Utils.manggiohang.get(i).setSoluong(soluong + Utils.manggiohang.get(i).getSoluong());
                     Utils.manggiohang.get(i).setGiasp(Long.parseLong(sanPhamMoi.getGiasp()));
-
+//                 danh dau san pham da co trong gio hang
                     flag = true;
                 }
             }

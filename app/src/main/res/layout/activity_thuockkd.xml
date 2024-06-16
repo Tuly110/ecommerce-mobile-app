@@ -8,6 +8,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         app:title="Thuốc không kê đơn"
+        android:fontFamily="sans-serif-condensed"
         android:background="#B2B4C1"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"

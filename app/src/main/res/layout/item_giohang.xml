@@ -26,6 +26,7 @@
                 android:textSize="10sp"
                 android:textStyle="bold"
                 android:id="@+id/item_giohang_tensp"
+                android:fontFamily="sans-serif-condensed"
                 android:text="Tên sản phẩm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -39,6 +40,7 @@
                 <TextView
                     android:id="@+id/item_giohang_gia"
                     android:layout_weight="2"
+                    android:fontFamily="sans-serif-condensed"
                     android:text="15.000"
                     android:textColor="@android:color/holo_red_light"
                     android:layout_width="wrap_content"
@@ -75,6 +77,7 @@
                     android:layout_height="18dp"
                     android:layout_gravity="center"
                     android:layout_weight="10"
+                    android:fontFamily="sans-serif-condensed"
                     android:text="30.000"
                     android:textColor="@android:color/holo_red_light"
                      />

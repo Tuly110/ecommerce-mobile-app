@@ -4,26 +4,29 @@
     android:elevation="8dp"
     android:layout_marginTop="10dp"
     app:cardCornerRadius="4dp"
-    android:layout_width="160dp"
+    android:layout_width="130dp"
     android:layout_height="wrap_content"
     >
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp">
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/itemsp_image"
                 android:src="@drawable/ic_media_24"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"/>
+                android:layout_centerInParent="true"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/itemsp_ten"
                 android:text="Thực phẩm chức năng"
-                android:textSize="16sp"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:layout_width="match_parent"
@@ -31,9 +34,10 @@
             <TextView
                 android:id="@+id/itemsp_gia"
                 android:text="Giá: 250000"
-                android:textSize="16sp"
+                android:textSize="12sp"
                 android:textColor="@android:color/holo_red_light"
                 android:textStyle="bold"
+                android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>

@@ -8,6 +8,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toobar"
         app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="sans-serif-condensed"
         app:title="Thanh toán"
         android:background="#3DF3DD"
         android:layout_width="match_parent"
@@ -35,6 +36,7 @@
                     android:id="@+id/txttongtien"
                     android:layout_marginLeft="5dp"
                     android:text="Tổng tiền:"
+                    android:fontFamily="sans-serif-condensed"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
@@ -63,13 +65,14 @@
                     android:id="@+id/txtsdt"
                     android:layout_marginLeft="5dp"
                     android:text="Số điện thoại:"
+                    android:fontFamily="sans-serif-condensed"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
                     android:layout_marginLeft="5dp"
-
+                    android:fontFamily="sans-serif-condensed"
                     android:textSize="15dp"
                     android:textColor="@color/red"
                     android:textStyle="bold"
@@ -90,13 +93,14 @@
                     android:id="@+id/txtusername"
                     android:layout_marginLeft="5dp"
                     android:text="Họ và tên:"
+                    android:fontFamily="sans-serif-condensed"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
                     android:layout_marginLeft="5dp"
-
+                    android:fontFamily="sans-serif-condensed"
                     android:textSize="15dp"
                     android:textColor="@color/red"
                     android:textStyle="bold"
@@ -117,13 +121,14 @@
                     android:id="@+id/txtemail"
                     android:layout_marginLeft="5dp"
                     android:text="Email:"
+                    android:fontFamily="sans-serif-condensed"
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
                     android:layout_marginLeft="5dp"
-
+                    android:fontFamily="sans-serif-condensed"
                     android:textSize="15dp"
                     android:textColor="@color/red"
                     android:textStyle="bold"
@@ -149,6 +154,7 @@
         app:layout_constraintTop_toBottomOf="@id/cardView">
         <com.google.android.material.textfield.TextInputEditText
             android:hint="Địa chỉ giao hàng"
+            android:fontFamily="sans-serif-condensed"
             android:id="@+id/diachigiaohang"
             android:textColorHint="@color/red"
             android:layout_width="match_parent"
@@ -165,6 +171,7 @@
         android:layout_marginRight="10dp"
         android:background="@drawable/background_button"
         android:text="Đặt hàng"
+        android:fontFamily="sans-serif-condensed"
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

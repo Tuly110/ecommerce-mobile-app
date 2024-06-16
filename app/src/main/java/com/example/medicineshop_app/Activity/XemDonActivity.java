@@ -49,19 +49,16 @@ public class XemDonActivity extends AppCompatActivity {
 
     private void getOder() {
 
-        compositeDisposable.add(apiBanhang.xemDonHang(3)
+        compositeDisposable.add(apiBanhang.xemDonHang(Utils.user_current.getId())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         DonHangModel -> {
                             if(DonHangModel.isSucess()){
-                                Toast.makeText(this, DonHangModel.getResult().get(1).toString(), Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(this, DonHangModel.getResult().get(1).toString(), Toast.LENGTH_SHORT).show();
                                 xemdonhang = DonHangModel.getResult();
-
                                 adapter = new DonHangAdapter(getApplicationContext(), xemdonhang);
                                  redonhang.setAdapter(adapter);
-
-
                             }else{
                             Toast.makeText(getApplicationContext(), DonHangModel.isSucess()+"Không thành công", Toast.LENGTH_SHORT).show();
                           }

@@ -17,6 +17,7 @@
             android:layout_height="match_parent">
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toobarmanhinhchinh"
+                android:fontFamily="sans-serif-condensed"
                 app:title="Trang chủ"
                 android:background="#DEEDCB"
                 android:layout_width="match_parent"
@@ -67,6 +68,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif-condensed"
                     android:text="Sản phẩm mới nhất"
                     android:textColor="@color/black"
                     android:textSize="20sp"

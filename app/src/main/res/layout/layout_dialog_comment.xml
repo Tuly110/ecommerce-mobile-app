@@ -13,6 +13,7 @@
         android:textSize="16sp"
         android:gravity="center"
         android:background="@drawable/bg_yellow_corner_16_left_top_right"
+        android:fontFamily="sans-serif-condensed"
         android:text="Nhập bình luận ở đây!" />
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,12 +26,14 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="14sp"
+            android:fontFamily="sans-serif-condensed"
             android:text="Hãy gửi ý kiến của bạn"/>
         <EditText
             android:id="@+id/edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-condensed"
             android:hint="Bình luận"
             android:background="@drawable/bg_white_corner_10_gray"
             android:padding="12dp"/>
@@ -48,6 +51,7 @@
                 android:layout_marginRight="10dp"
                 android:backgroundTint="#A699AC"
                 android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
                 android:text="Không"/>
             <Button
                 android:id="@+id/btn_commentyes"
@@ -58,6 +62,7 @@
                 android:layout_weight="1"
                 android:textColor="@color/black"
                 android:backgroundTint="@color/yellow"
+                android:fontFamily="sans-serif-condensed"
                 android:text="Gửi"/>
         </LinearLayout>
     </LinearLayout>

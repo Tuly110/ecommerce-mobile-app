@@ -8,6 +8,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toobar"
         app:title="Tìm kiếm sản phẩm"
+        android:fontFamily="sans-serif-condensed"
         android:background="#B2B4C1"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
@@ -15,6 +16,7 @@
     </androidx.appcompat.widget.Toolbar>
     <EditText
         android:hint="Nhập sản phẩm cần tìm kiếm"
+        android:fontFamily="sans-serif-condensed"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"

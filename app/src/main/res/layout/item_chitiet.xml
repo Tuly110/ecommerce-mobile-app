@@ -27,12 +27,14 @@
                <TextView
                    android:id="@+id/item_tenspchitiet"
                    android:text="Thuốc không kê đơn"
+                   android:fontFamily="sans-serif-condensed"
                    android:textSize="15sp"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"/>
                <TextView
                    android:id="@+id/item_soluongchitiet"
                    android:text="Số lượng: 2"
+                   android:fontFamily="sans-serif-condensed"
                    android:textSize="15sp"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"/>

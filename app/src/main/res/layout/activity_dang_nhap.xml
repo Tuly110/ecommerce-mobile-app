@@ -9,6 +9,7 @@
         android:id="@+id/dangnhap"
         app:layout_constraintTop_toTopOf="parent"
         android:text="Đăng nhập"
+        android:fontFamily="sans-serif-condensed"
         android:textSize="25sp"
         android:textColor="@color/design_default_color_primary_dark"
         android:gravity="center"
@@ -57,6 +58,7 @@
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed"
         android:text="Đăng nhập"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -71,12 +73,14 @@
         android:layout_height="wrap_content">
         <TextView
             android:text="Bạn chưa có tài khoản?"
+            android:fontFamily="sans-serif-condensed"
             android:textSize="15sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/txtDangKy"
             android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed"
             android:text="Đăng kí"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -88,6 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/line6"
         android:layout_marginTop="15dp"
         android:text="Quên mật khẩu"
+        android:fontFamily="sans-serif-condensed"
         android:textColor="@color/design_default_color_primary_dark"
         android:gravity="center"
         android:id="@+id/txtresetpass"

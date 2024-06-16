@@ -29,6 +29,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:text="Quên mật khẩu"
+        android:fontFamily="sans-serif-condensed"
         android:background="@drawable/background_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

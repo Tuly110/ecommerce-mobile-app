@@ -17,6 +17,7 @@
                 <TextView
                     android:id="@+id/iddonhang"
                     android:text="Đơn hàng 123"
+                    android:fontFamily="sans-serif-condensed"
                     android:layout_marginLeft="5dp"
                     android:padding="5dp"
                     android:textStyle="bold"
